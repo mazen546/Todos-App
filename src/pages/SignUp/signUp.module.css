@@ -1,0 +1,45 @@
+.log-in {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  width: min(400px, 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+form .header {
+  margin-bottom: 20px;
+}
+form button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  flex-shrink: 1;
+  padding: 10px;
+  border-radius: 15px;
+  background: transparent;
+}
+form input {
+  background: transparent;
+  color: #fff;
+  padding: 10px;
+  border-radius: 15px;
+}
+form .create-account {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+form .create-account p {
+  color: #ffffff7e;
+}

@@ -1,0 +1,69 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.completed-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.task {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: start;
+  background: #21212b;
+  border-radius: 20px;
+  padding: 15px;
+}
+.head {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: start;
+  background: #21212b;
+  border-radius: 20px;
+  padding: 15px;
+}
+.task .description .calendar {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.task .description .calendar svg {
+  width: 22px;
+}
+.task .description p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.task .description img {
+  width: 20px;
+  margin: 0;
+}
+
+.task .expand-btn {
+  margin-left: auto;
+}
+.nested-task {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 25px);
+  gap: 15px;
+  background: #21212b;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.nested-task:first-child {
+  margin-top: 10px;
+}
+.completed {
+  text-decoration: line-through;
+}

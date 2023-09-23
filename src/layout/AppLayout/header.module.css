@@ -1,0 +1,96 @@
+.header {
+  display: flex;
+  padding: 15px 20px;
+  background: #21212b;
+  position: relative;
+}
+.header nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header .sidebar-icon {
+  cursor: pointer;
+  display: none;
+}
+@media (width < 1050px) {
+  .header .sidebar-icon {
+    display: block;
+  }
+}
+
+.header nav .icon {
+  transition: 0.5s;
+}
+.link {
+  color: #999;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.link.active-link {
+  color: #fff;
+}
+.header .user {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+}
+.header .user p {
+  display: none;
+}
+.header .menu-btn {
+  display: none;
+}
+.user .add-task {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.user svg {
+  border-radius: 10px;
+  padding: 3px;
+  width: 33px;
+  height: 33px;
+}
+.user .avatar .person {
+  border-radius: 50%;
+}
+@media (max-width: 490px) {
+  .header nav svg {
+    width: 30px;
+    height: 30px;
+  }
+  .header nav p {
+    display: none;
+  }
+  .header .menu-btn {
+    display: block !important ;
+    margin-left: auto;
+  }
+  .user {
+    position: absolute !important;
+    flex-direction: column;
+    width: 200px;
+    background-color: #414052;
+    border-radius: 5px;
+    right: -200px;
+    top: 100%;
+    padding: 10px;
+    transition: 0.5s;
+    z-index: 1;
+  }
+  .open {
+    right: 0;
+  }
+  .header .user > * {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 8px 0;
+  }
+  .header .user p {
+    display: block;
+  }
+}

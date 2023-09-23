@@ -1,0 +1,24 @@
+.dark-btn {
+  background: var(--dark-btn-color);
+}
+.ball {
+  position: fixed;
+  z-index: -1;
+}
+.colorized-circle {
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+    var(--colorized-circle-color-one),
+    var(--colorized-circle-color-two)
+  );
+}
+.dark-circle {
+  border-radius: 50%;
+  background: linear-gradient(
+    30deg,
+    var(--dark-circle-color-one),
+    65%,
+    var(--dark-circle-color-two)
+  );
+}

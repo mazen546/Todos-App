@@ -1,0 +1,38 @@
+.side-bar {
+  background: #21212b;
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  transition: 0.5s;
+  z-index: 100;
+}
+@media (width< 1050px) {
+  .side-bar {
+    left: -250px;
+  }
+  .show-sidebar {
+    left: 0;
+  }
+}
+.side-bar .heading {
+  padding: 15px;
+}
+.side-bar ul {
+  display: flex;
+  flex-direction: column;
+}
+.side-bar ul a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+.side-bar ul a.active-link {
+  background-color: #272732;
+}
+.side-bar ul a svg {
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  border-radius: 10px;
+}
