@@ -1,8 +1,8 @@
-import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { useEffect, useRef, useState } from "react";
 import { useElementMargin } from "../../hooks/useElementMargin";
 import List from "/src/components/List/List";
 import { styled } from "styled-components";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 const StyledParent = styled.div`
   display: flex;
   align-items: start;
@@ -53,7 +53,7 @@ function ExpansionList({
             onClick={handelShow}
             style={{ marginLeft: "auto" }}
           >
-            {show ? <ExpandLess /> : <ExpandMore />}
+            {show ? <IoIosArrowUp /> : <IoIosArrowDown />}
           </button>
         )}
       </StyledParent>

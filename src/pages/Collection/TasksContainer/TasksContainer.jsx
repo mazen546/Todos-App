@@ -7,11 +7,12 @@ import {
   updateTask,
 } from "/src/feature/collections/collectionsSlice";
 import { styled } from "styled-components";
-import subTaskIcon from "src/assets/images/subTasksIcon.svg";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+// import subTaskIcon from "src/assets/images/subTasksIcon.svg";
+
 import Task from "../../../components/Task/Task";
-import React from "react";
 import ExpansionList from "../../../components/Expansion Tasks List/ExpansionList";
+import { IoCalendarClearOutline } from "react-icons/io5";
+import { TbSubtask } from "react-icons/tb";
 
 const TasksContainer2 = () => {
   const param = useParams();
@@ -95,20 +96,20 @@ const MainTaskBody = (prop) => {
         {title}
       </p>
       {nestedTasksLen === 0 ? null : (
-        <React.Fragment>
-          <img src={subTaskIcon} alt="" />
+        <>
+          <TbSubtask style={{ fontSize: "25px", color: "lightslategray" }} />
           <p className="small">
             {doneNestedTasksLen}/{nestedTasksLen}
           </p>
-        </React.Fragment>
+        </>
       )}
       {endDate ? (
-        <React.Fragment>
-          <CalendarTodayOutlinedIcon />
+        <>
+          <IoCalendarClearOutline style={{ color: `${deadLineColor}` }} />
           <p className="small" style={{ color: `${deadLineColor}` }}>
             {deadLine}
           </p>
-        </React.Fragment>
+        </>
       ) : null}
     </StyledMainTaskBody>
   );

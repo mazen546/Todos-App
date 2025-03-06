@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "eact";
+import { useRef, useEffect, useState } from "react";
 
 function useElementMargin(ref) {
   const [margins, setMargins] = useState([0, 0, 0, 0]);

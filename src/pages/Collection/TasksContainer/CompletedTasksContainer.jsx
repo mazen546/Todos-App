@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import styles from "./styles.module.css";
 import { updateNestedTask } from "/src/feature/collections/collectionsSlice";
 import React from "react";
-import subTaskIcon from "src/assets/images/subTasksIcon.svg";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import { styled } from "styled-components";
 import Task from "../../../components/Task/Task";
 import ExpansionList from "/src/components/Expansion Tasks List/ExpansionList";
+import { IoCalendarClearOutline } from "react-icons/io5";
+import { TbSubtask } from "react-icons/tb";
 
 const StyledMainTaskBody = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ const MainTaskBody = (prop) => {
       </p>
       {nestedTasksLen === 0 ? null : (
         <React.Fragment>
-          <img src={subTaskIcon} alt="" />
+          <TbSubtask style={{ fontSize: "25px", color: "lightslategray" }} />
           <p className="small">
             {doneNestedTasksLen}/{nestedTasksLen}
           </p>
@@ -51,7 +51,7 @@ const MainTaskBody = (prop) => {
       )}
       {endDate ? (
         <React.Fragment>
-          <CalendarTodayOutlinedIcon />
+          <IoCalendarClearOutline style={{ color: `${deadLineColor}` }} />
           <p className="small" style={{ color: `${deadLineColor}` }}>
             {deadLine}
           </p>

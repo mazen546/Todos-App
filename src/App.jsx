@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Start from "./pages/Start/Start";
+import Welcome from "./pages/Welcome/Welcome";
 import NotFound from "./pages/NotFound";
 import LogIn from "./pages/LogIn/Log-in";
 import SignUp from "./pages/SignUp/SignUp";
@@ -20,7 +20,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<StartLayout />}>
-            <Route index element={<Start />} />
+            <Route index element={<Welcome />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="login" element={<LogIn />} />

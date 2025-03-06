@@ -1,5 +1,4 @@
-import GoogleIcon from "@mui/icons-material/Google";
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Ball from "../../components/Ball";
 import styles from "./log-in.module.css";
@@ -14,10 +13,10 @@ const LogIn = () => {
       <form className={styles.form}>
         <h2 className={styles.header}>Sign in.</h2>
         <button type="button" className="border google-sign-up btn">
-          <GoogleIcon /> Continue with Google
+          <FaGoogle /> Continue with Google
         </button>
         <button type="button" className="border google-sign-up btn">
-          <FacebookRoundedIcon /> Continue with Facebook
+          <FaFacebook /> Continue with Facebook
         </button>
         <span style={{ fontWeight: "bold" }}>or</span>
         <input

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import backgroundImage from "../../assets/images/background-image.png";
-import style from "./start.module.css";
+import style from "./welcome.module.css";
 import Ball from "../../components/Ball";
 function Start() {
   const currentUser = true;

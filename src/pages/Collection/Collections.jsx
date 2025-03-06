@@ -1,6 +1,6 @@
 import style from "./collections.module.css";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-import AddRoundedIcon from "@mui/icons-material/AddRounded";
+import { HiDotsHorizontal } from "react-icons/hi";
+import { FaPlus } from "react-icons/fa";
 import CollectionCard from "./CollectionCard";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ function Collections() {
       <div className={`${style.container} container`}>
         <div className={style.header}>
           <h3>Collections</h3>
-          <MoreHorizIcon className={style["menu-icon"]} />
+          <HiDotsHorizontal className={style["menu-icon"]} />
         </div>
         <div className={style.buttons}>
           <button>Favorites</button>
@@ -26,7 +26,7 @@ function Collections() {
         <div className={style["collections-container"]}>
           {CollectionsElements}
           <button className={style["add-collection"]}>
-            <AddRoundedIcon />
+            <FaPlus />
           </button>
         </div>
       </div>

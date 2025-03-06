@@ -15,7 +15,7 @@ const data = [
           "Write a short paragraph about a historical event or significant figure",
         isDone: false,
         startDate: "2023-09-18",
-        endDate: "2023-09-10",
+        endDate: "2025-03-10",
         nestedTasks: [
           {
             id: "8bd229d4-db45-4f26-8420-b5af135aed05",
@@ -54,7 +54,7 @@ const data = [
         title: "Write a persuasing essay about a particular issue or topic",
         isDone: false,
         startDate: "2023-09-16",
-        endDate: "2023-10-04",
+        endDate: "2025-10-04",
         nestedTasks: [
           {
             id: "7c3753fb-0fb0-4206-a19f-2161e154f26a",

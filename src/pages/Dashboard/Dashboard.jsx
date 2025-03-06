@@ -1,14 +1,16 @@
 import style from "./dashboard.module.css";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+// import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { useSelector } from "react-redux";
 import icons from "../../assets/icons/icons";
-import { ArrowForward } from "@mui/icons-material";
+// import { ArrowForward } from "@mui/icons-material";
 import Task from "/src/components/Task/Task";
 import ExpansionList from "../../components/Expansion Tasks List/ExpansionList";
 import { getTodayTasks } from "../../utils/getTodayTasks";
 import React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import { HiDotsHorizontal } from "react-icons/hi";
 
 const MainBody = ({ iconComponent: Icon, color, name }) => {
   return (
@@ -53,7 +55,7 @@ function Dashboard() {
         massageItem={{ massage: "No Tasks Today" }}
       >
         <Link to={`/collections/${collection.id}`} className={style["go-to"]}>
-          <p className="small-medium">Go to Collection</p> <ArrowForward />
+          <p className="small-medium">Go to Collection</p> <FaArrowRight />
         </Link>
       </ExpansionList>
     );
@@ -64,7 +66,7 @@ function Dashboard() {
       <div className={`${style.container} container`}>
         <div className={style.header}>
           <h3>Dashboard</h3>
-          <MoreHorizIcon className={style["menu-icon"]} />
+          <HiDotsHorizontal className={style["menu-icon"]} />
         </div>
         <div className={style.title}>
           <h2 className="large">Good morning,</h2>
